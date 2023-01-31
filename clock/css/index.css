@@ -1,0 +1,38 @@
+
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, rgba(0, 195, 255, 0.356), #bfa);
+  }
+  .box {
+    width: 400px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    /* 平移 */
+    transform: translate(-50%, -50%);
+    /* 水平位移 垂直位移 模糊半径 颜色 */
+    box-shadow: 1px 1px 10px #fff;
+    text-shadow: 0px 1px 30px white;
+
+    /* 弹性盒布局 */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 70px;
+    /*
+      css控制页面文字不能被选中user-select:none;
+      现象：html中可能有些地方不想让用户复制文字，或是用a标签做了个点击按钮，点快的时候文字会被选中，很丑，这个时候可以使用下面的方案禁止文字选中。
+      原因：鼠标点快了文字会被选中。
+    */
+    user-select: none;
+    padding: 0 20px;
+
+    /* 盒子投影 */
+    -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0%, transparent), to(rgba(250, 250, 250, .2)));
+  }
